@@ -1,0 +1,12 @@
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.exe
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.deps.json
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.runtimeconfig.json
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.runtimeconfig.dev.json
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.dll
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.pdb
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.AssemblyInfoInputs.cache
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.AssemblyInfo.cs
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.csproj.CoreCompileInputs.cache
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.dll
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.pdb
+E:\Programme\c#\ConsoleProgramme\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.genruntimeconfig.cache

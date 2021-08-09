@@ -1,0 +1,691 @@
+﻿Remaining Topics :
+	1: Extension method 2:
+	2: string vs stringbuilder
+	3: ref vs out vs val keyword in c#
+	4: Generic Folder
+	5: delegates
+
+
+Questions 1 : What is the difference between Finalize and Dispose method in terms of memory management?
+Answer -: 
+	1: Finalize(Destructor) and Dispose both are used for clearing Unmanaged Resourse
+	2: Finalize is bit expensive because it is called ny GC(Garbage Collector). GC maintain a separate queue/array when it adds 
+	   all Object which has finalized implemented . and Dispose is implemented using IDispose interface by programmer.
+	3: It is always recommended that, one should not implement Finalize method until it is extreamly necessary. First priority
+	   should always be to implement the Dispose method and clean unmanges Resources
+
+
+Question : difference between  shallow copy and deep copy?
+Question : difference between IEnumerable and IEnumerator ?
+Question : Difference between Array.clone and Array.Copy ?
+
+
+Question 2: Can we call GC explicitly?
+Answer -: Yes i.e GC.Collect() . 
+
+	** Class must implement IDisposable interface in order to use "Using" Block.
+
+
+Question 3: Difference between var and Dynamic ?
+Answer -:
+	A] Var keyword
+
+	1: var introduced in 3.0 and this is strongly types value is checked at compile time
+		Example : var value="Farukh" // Assign as string at compile time
+	2: You cannot Assign var value as global level
+	3:  we cannot pass var as a parameter
+
+	B] Dynamic keyword
+
+	1: variable type is checked at Runtime . 
+	2: You can assign value as global variable.
+	3: pass parameter as dynamic.
+
+
+Question 4: Difference between readonly and const ?
+
+Answer : 
+	constant -:  
+	1: value must be declare at the time of initilization it cannot be changed
+	2: constant value cannot be reinitilize 
+
+	readonly -:
+	1: it is not necessary that value must be declare at the time of initilization
+	2: reinitilize variable inside constructor
+
+
+Question 5: what are the different Operators ?
+Answer : 
+		There are several different operators 
+	1: Assignment Operator -:
+			- When u want to assign some value to variable . Assignment operator is used
+			  Example : int first=0; 
+	2: Arithmetic Operator -:
+			- If u want to perform some arithmetic operation.
+	3: Comparison Operator -: 
+			- If u want to compare to variable
+	4: Conditional Operator -:
+			- if u want to compare two comparison operator
+	5: Ternary Operator -: 
+			- Syntax : (Condition)?"output1":"output2";
+
+Question 6: What ARE Different Decision Making Statement ?
+Answer : 
+	1] If else Statement -: 
+
+	2] switch statement -:
+
+Question 7: What are different Looping Concept in c# ?
+Answer -: 
+	1] For loop -: 
+		- Execute a statement or a block of statements repeatedly until specific expression evaluate to false .
+
+	2] For each loop -:
+		- Statement repeats a group of embedded statements for each element in an array or an object collection
+		- No need to specify limit bound .
+
+		imp -:
+			1: break - it is used to jump outside the loop after condition satisfy
+			2: continue - skip curent iteration which satisfy then go to next iteration
+
+	3] While loop and do while loop 
+		- do while loop is the same as while loop except that it executes the code block at least once .
+		
+
+
+											OOPS
+											----
+											----
+
+1] Abstraction -: 
+
+2] Polymorphism -:
+	- According to input of object output value changes
+	- Polymorphism is Greek word poly means many and morphs means it behaviour
+
+3] Encapsulation -:
+	- it is a process of binding the data member and member functions into single unit .
+	- it is used to prevent business logic from outside the user .
+
+	Note : we achieve Encapsulation using Access modifier
+
+	** Access modifier : it is used to defined the scope of variable .
+	   There are 5 access modifier
+	   1: Private - Accessible only within class
+	   2: Protected - Accessible within the class and the derived classes .
+	   3: internal - Accesible anywhere within the current project
+	   4: protected internal - Accessible with current project and derived classes .
+	   5: public - Access anywhere 
+
+4] Inheritence -:
+	- Process of inheriting fron one class (parent) to another class (child class) with intention of
+	  code Extensibility and Reusability
+
+	- Types of inheritence
+	1: Single inheritence -: one parent class and its child class
+	2: multilevel inheritence
+	3: Hhierarchical inheritence
+	4: Multiple inheritence
+	5: Hybrid inheritence
+
+	Note : c# doesnt support multiple and hybrid inheritence bcoz of diamond problem i.e ambuiguity arises
+	    but we can achieve with the help of interface . 
+		
+
+Question 8 : Abstraction vs Encapsulation
+	- Abstraction is used to hide unwanted data for user and shows only the required properties and methods.
+	- Encapsulation hide the business logic from user to prevent data for code changes by user
+
+
+Note : the default access modifier of class is "internal". and variable is "private".
+
+
+Question 9: How do you call parent method from child class method ?
+Answer -: Use base keyword .
+
+Question 10 : In case of inheritence what is sequence of constructor that gets called ?
+Answer -: 
+	- Parent constructor gets called first then subsequent child constructor .
+	- if both the class parent and child contain static constructor then 
+	  first child constructor is called then parent constructor .
+
+Question 11 : How to restrict any class to inherit further ?
+Answer : Use sealed keyword against class.
+
+Question 12 : Can a static class be inherited ?
+Answer : No static class cannot be inherited . static class can not be parent or child .
+
+
+Question 13 : What is constructor ?
+Answer : 
+	- Constructor is special member function of class whos name is exactly match with class name .
+	- it is use to initialize the variable inside the class with default value .
+	- it does not contain any return type
+	Example :
+			class Example 
+			{
+				// constrctor
+				public Example 
+				{
+					// initialize the variable default value .
+				}
+			}
+
+
+	- when class object is created constructor is automatically called .
+	- we cannot assign static constructor any acces modifier bcoz is bydefault public .
+		
+	Example -:
+	static class StudentstaticClass1
+    {
+        // static class contain only static member only.
+        static StudentstaticClass1()
+        {
+            Console.WriteLine("Static constructor is called !!");
+        }
+        public static void GetAdmission()
+        {
+            Console.WriteLine("This is parent class for Admission Id");
+        }
+    }
+
+
+Question 14: What is Polymorphism ? Types of Polymorphism ? Benefits of Polymorphism ?
+Answer : 
+	- Polymorphism is greek word,meaning "One name many forms" .
+	
+	** Types of Polymorphism **
+	1] Early Binding/static(compile time) polymorphism/Method overloading -:
+			- same function name with different input signature of parameter irrespective of their return type.
+			  i.e number of parameter , datatype of parameter , change the order of parameter
+			- Method overloding always take place in same class.
+			-
+			- Method name should vary with number of types of parameter and return type .
+			- static polymorphism is checked at compile time. i.e syntax checking 
+
+
+Note : what is the output ?
+
+	class StudentoverlodClass
+	{
+		 public void GetAdmission(int studentId)
+        {
+            Console.WriteLine("Get admission based on Student Id :"+studentId);
+        }
+        public int GetAdmission(int studentId)
+        {
+            return studentId;
+        }
+	}
+
+Answer : it is function overloading Example. same function name with different input signature irrespective of return type
+		but if u see in above example same function name with same parameter with same datatype but
+		different return type and does not matter to function overloading  so its gives error.
+
+	2] Late Binding/dynamic(RunTime) polymorphism/Method overriding -: 
+		- Method overriding also knows as RunTime polymorphism .
+		- reimplementation of parent class method inside child class 
+		  with same function name with same  parameter and same return type . exctly match just code inside function different 
+
+	** Benefits of polymorphism **
+	1: Code Reusability and simplicity i.e classes once written tested and implemented can be reused as required .
+	2: Time saving in rewritten codes and easy to debug
+	3: Single variable in rewritten code be used to store multiple datatypes 
+
+
+Question 15 : What is Method Hiding ?
+Answer :
+
+
+
+Question 16 : Interface ?
+Answer : 
+	- interface is class , it is a contract which must be followed .
+	- An interface  in c# is a type defination similar to a class , 
+	  except that it has only method declaration termed as contract.
+
+	* Benefit of Interface 
+	1: Without bothering about the implementation part , we can achieve the security of implementations .
+	2: In c# , multiple inheritence is not allowed, however you can use interface to make use of it 
+	   as you can implement more than one interface .
+	3: used to achieve total abstraction .
+	4: Enforce Standarization of Application. i.r interface class method must be implemented inside child class 
+		if dont then they give error .
+
+	* Two ways to Interface Implementation 
+		A] Implicit interface
+		B] Explicit interface :
+				- it solve the problem of multiple inheritence in c# .
+				- when two interface contain same method which method interface is implemented inside child classes id done
+				  with the help of explicit interface in c#.
+
+
+Question 17 : Difference between interface and Abstract ?
+
+					Abstract											Interface
+
+1: Does not support Multiple inheritence					1: Support Multiple inheritence 
+2: Concrete method is allowed .								2: Concreete method i.e non abstract method not allowed
+3: Can have access modifiers for member .					3: Can not have access modifiers for members .
+4: Fields and Constants can be defined .					4: No Fields and constants can defined	
+5: if u want to increase Reusabiltity using					5: Interface are used to define contract,
+   inheritence Abstract class is used .						   enforce standarization ,	
+   i.e Abstract classes are used when we want to share		   decoupling and dynamic polymorphism
+   common functionality in parent-child relationship.														   
+6 : Abstract classes are inherited							6: Interfaces are implemented .
+
+
+	Note -:
+	- An Abstract class is class that is declared abstract , it may or may not be include abstract methods
+	- Abstract classes cannot be instantiated . but can have constructor 
+	- Abstract method must be implemented in subclass .
+
+
+Question 18 : Static keyword in c# 
+Answer : 
+	- We use static keyword in order to make variable class or function of type static .
+	- Static keyword when used ensure that only one instance is created .
+
+	Static variable -: single copy is created and shared among all objects at the class level . 
+
+	static class -: 
+		- A static class is created using the "static" keyword in c# .
+		- static member are stored in a special area inside the heap called "High Frequency Heap".
+		- A c# static class is a class that can not be instantiated .
+		- A static class contain static member only .
+		- Non static class contain static as well as non-static member .
+		- Any class can have static constructor which is automatically called once while first instantiation of class 
+		- We cannot call static constructor explicitly .
+		- static constructor is always parameterless bcoz it call implicitly by CLR 
+		- static constructor doesnt contain access modifier .
+		- Static member should be called with classname . operator 
+
+
+Question 19 : Partial keyword in c#
+Answer : 
+	- Using Partial keyword we can split class code into multiple parts , we can split an interface , struct or class into
+	  one or more parts .
+	- For CLR , it is a single class but for us it is single files and multiple developers can also work simultaneously
+	  like one creating logic and other working in designer parts in asp.net
+
+	- We can have partial method inside partial class i.e declare method at one place and give body to another file 
+	  where we have same
+
+Note : 
+	1] Sealed property -: if a partial class is sealed then the entire class will be sealed .
+	2] Abstract Property -: If a partial class is abstract then the entire class will be abstract class .
+	
+- Name of both partial classes should be same only .
+
+** Important Things to note about Partial Method **
+1: A partial method must return void 
+2: A partial method declration must be begin with the keyword partial .
+3: A partial method can have ref but not out parameters .
+4: A partial method is implicitly private , and therefore they cannot be virtual .
+5: A partial method are private 
+6: Partial methods can have static and unsafe modifier .
+7: Partial methods can be generic .
+
+
+Question 20 : Extension Method ?
+Answer -: 
+	- An Extension methods enables us to add methods to existing types without deriving new types or recompiling or modifying 
+	  the original types .
+	- Three points to be implemented extension method.
+		1: static class
+		2: static method
+		3: This keyword should be the first parameter .
+
+Note : What would you do if parent class is "sealed" ?
+	Solution : use Extension method 
+
+
+Question 21 : IS vs AS keyword in c# ?
+Answer : 
+		C# provides two more very useful operators that can help us to perform casting and check object compatibility 
+		in a much more elegant manner by using the "IS" and "AS" operator .
+
+* Difference between "IS" and "AS" ?
+	 IS - is operator is used to check the compatibility of an object with given type and it return the result as a boolean 
+			(True or False) .
+	 AS - As operator is used for casting of Object to a given type or a class .
+
+* Advantages of as over is : 
+	A] "is" operator is two steps :
+			- checks the type using is , if it's true then type cast .
+			- This affects the performance since each and every time the CLR will go through the inheritence hierarchy ,
+			  checking each base type against the specified type . to avoid this , use as , 
+			  it will do it in one step .
+			- Only for checking the type should we use the is operator .
+
+	Note -: 
+		- "AS" keyword is not able to type cast it returns null .
+		- "IS" keyword returns false if not two types are not same .
+
+
+Question 22 : String and StringBuilder class in c#
+Answer -: 
+	- Objects of string are immutable , and objects of stringbuilder are mutable .
+
+	Note -: immutable means once you create an instance you can not modify it later and it always create a new object of  
+			string type .
+
+	- StringBuilder : is faster than string hence preferred for single threaded programe .
+
+Question 23 : Params keyword in c# ?
+Answer -: "params" is used to pass object array parameter in a function .	
+
+Question : What if you're not sure of the number of arguments in a function ?
+Answer -: The "params" keyword in c# allows a method to accept a variable number of arguments . 
+		  c# params works as an array of objects
+
+Note : params must be the last parameter in a function .
+
+			
+
+Question 24 : Recursion in c#
+Answer -: 
+	- Divide and Conquer mentality technique . 
+	- Method calling to itself is called "Recursion" .
+
+
+Question 25 : Ref vs Out vs Val keyword in c# ?
+Answer -: 
+	- The ref and out keyword in c# is used for the passing the argument to methods as a reference type .
+	- By default parameters are passed as val type .
+	- Both ref and out are  treated diffrently at the run time  and they treated same at compile time .
+	
+
+
+Question 25 : Enum in c#
+Answer -:
+		- enum is named integer constant . 
+		- we can only assign integer value to Enum member .
+
+
+Question 26 : Yield keyword in c# ?
+Answer -: 
+	- it is used to provide stateful iteration without creating temporary collection .
+
+
+--------------------------------------------------------------------------------------------------------------------------
+										** Exception Handling in c# **
+
+Question 27 : What is Exception ?
+Answer -: 
+		- Unintentional error occurred while application is Running .
+	Foe example -: An attempt to read a file that does not exists or try to read database table that does not exist .
+		- Exception is class and Every exception in c# inherits from System.Exception class.
+
+	Types of Exception -:
+			1: System Exception
+			2: Application or custom level exception .
+
+Question 28 : What is advantage of exception Handling ?
+Answer -: 
+	- Exception handling helps to access system health .
+	- Showing unhandled exception to user is not recommended security reason which open hole for hackers to hack application 
+	  as it gives the stack trace .
+	- Genuine user might not understand exception message and looks irritating .
+
+Question 29 : Three blocks of Exception ?
+Answer -: Try--catch--Finally
+
+
+Question 30 : Can we have only try block ?
+Answer -: no , we can not have only try block it must be followed try -- catch or finally block at least i.e try -- finally .
+
+	Note -: Exception is class and Every exception in c# inherits from System.Exception .and it can handle all type of Exception
+
+Question 31 : Can we have multiple catch block ?
+Answer -: Yes , but at a time only one exception will be executed .
+
+Question 32 : What is difference between throw vs throws ex ?
+Answer -: 
+	- Throw preserves stack trace whereas replaces stack trace and gives current exception stack trace information .
+	- It is good practice to use the "throw" statement than "Throw ex" 
+	  because it gives us more accurate stack trace information than "throw ex" .  
+
+Note -: 
+	1: Stack trace gives you information about exception .
+	2: Finally block is always executed .
+
+
+-------------------------------------------------------------------------------------------------------------------------- 
+
+Question 33 : What is Boxing and UnBoxing ?
+Answer -: 
+	A] Boxing -: Process of converting value type to reference type is called Boxing .
+	B] UnBoxing -: Process of converting Reference type to Value type is called UnBoxing .
+
+
+--------------------------------------------------------------------------------------------------------------------------
+									** Generics **
+Question 34 : What is Generics ?
+Answer : 
+	- Code development with independent of Data types . i.e separate the logic from Datatypes
+	- We can define generic classes , interface , abstract classes , fields , methods static methods , properies and events ,
+	  delegates and operators .
+	- Generics classes are available in System.Collections.Generics namespace .
+
+Questions 35 : Advantage 
+	- Code Reused , type safety and performance 
+	- Create generic class with constraints .
+	
+	Note : Constraints in Generics 
+		
+			Constraints										Descriptions 
+
+	1: where T:class						- The type argument must be reference type
+	2: where T:new()						- The type argument must have a public parameterless constructor
+	3: where T:<interface name>				- The type argument must be or implemented the specifier interface .
+
+
+Questions 36: what are generic collections ?
+	
+	- Generic collection contain the advantages of Array and Collection
+
+	A] Array -:
+		Advantage :
+		1: store strongly type datatype i.e homogenous element .
+		2: no Boxing and UnBoxing is required .
+
+		DisAdvantages :
+
+		1: Runtime Resizable of value use Array.Resize() bcoz size is fixed .
+		2: we cannot add value in middle of array at runtime
+		
+		Syntax :
+			int[] num=new int[5];
+				- 5 size is fixed
+
+	B] Collection -:
+		Advantage :
+			1: collection easily Resizable at Runtime
+
+		Disadvantages :
+			1: store different datatype i.e heterogenous element . boxing and UnBoxing is required
+
+
+	c] generic collection :
+			1: strongly type data store so no boxing and UnBoxing is required .
+			2: easily resizable
+
+
+		Non-Generics collections							Generics collections
+
+		Hashtable											Dictionary<key,value>
+		ArrayList											List<type>
+		Stack												Stack<type>
+		Queue												Queue<type>
+
+
+Question 37: HastTable vs Dictionary ?
+Answer -: 
+	- HashTable is NonGeneric . Dictionary is Generic and Faster than HashTable .
+	- Hashtable is included in the System.Collection namespace
+	- HashTable return null if we try to find a key which does not exist .
+	- HashTable is a loosely typed(non-generic) collection .
+	
+
+	- Dictionary is a generic collection,included in the System.Collections.Generic namespace 
+	- Data retrieval is faster than Hashtable since there is no boxing and unboxing .
+	- Dictionary throws an exception if we try to find a key which is not exist .
+
+
+------------------------------------------------------------------------------------------------------------------
+
+									*** Delegates ***
+
+Question 38 : What is delegates ?
+Answer -: A delegate is type safe function pointer i.e delegates holds pointer of a function .
+	
+	Note -: The signature of the delagate must match the signature of function .
+
+
+Question 39 : Types of Delegates ?
+Answer -: 
+	1] Single Delegate 
+	2] Multicast Delegate ( Holds multiple functions reference )
+
+
+	Note  - : 
+		1: if the delegate has return type other than void and if the delegate is a multicas delegate, only the value of the 
+			last invoked method will be returned .
+		2: GetInvocationlist() function gives you list of subscribed function to delegates .
+
+Question 40: Where do you use Multicast Delegates ?
+Answer -: Observer design patteren also termed as publish / subscribe patteren .
+
+Question 41 : Inbuilt delegates provided by .Net Framework ?
+Answer -: 
+	- Action : function does not return any value .
+	- Predicate : function return bool value .
+	- Func : function pointer who take zero , one or more parameter and can return value .
+
+----------------------------------------------------------------------------------------------------------------------------
+											*** Delegate vs Event ***
+
+
+Question 42: In case of multicast delegates if there is an exception on anyone of method , 
+			 will next subscribed method be executed ? 
+Answer -: No 
+
+Question 43: What is Event ?
+Answer - :
+	- An event declaration adds a layer of abstraction and protection an the delegates instance . 
+	- Events can be included in an interface declaration .
+	
+** Event is delegate reference with two restrictions on it .
+	1: one is that you cannot invoked event reference directly .
+	2: cannot assign to event directly .
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+													*** Tuple ***
+- Introduced in .Net Frameowrk 4.0 .
+- Tuple is Reference type .
+- Typle can have at most 8 element
+- Use tuple.ItemNo to access member and 8th element can be accessed using tuple.Rest property .
+- A Tuple is Data structure that contains a sequence of elements of different data types .
+- Members of Tuple are ReadOnly . and tuple is static class .
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
