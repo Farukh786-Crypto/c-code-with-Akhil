@@ -1,18 +1,19 @@
 ﻿Remaining Topics :
-	1: Extension method 2:
-	2: string vs stringbuilder
+	
 	3: ref vs out vs val keyword in c#
 	4: Generic Folder
 	5: delegates
+	6: MultiThreading
+	7:Collection
 
 
 Questions 1 : What is the difference between Finalize and Dispose method in terms of memory management?
 Answer -: 
 	1: Finalize(Destructor) and Dispose both are used for clearing Unmanaged Resourse
-	2: Finalize is bit expensive because it is called ny GC(Garbage Collector). GC maintain a separate queue/array when it adds 
+	2: Finalize is bit expensive because it is called by GC(Garbage Collector). GC maintain a separate queue/array when it adds 
 	   all Object which has finalized implemented . and Dispose is implemented using IDispose interface by programmer.
 	3: It is always recommended that, one should not implement Finalize method until it is extreamly necessary. First priority
-	   should always be to implement the Dispose method and clean unmanges Resources
+	   should always be to implement the Dispose method and clean unmanged Resources
 
 
 Question : difference between  shallow copy and deep copy?
@@ -32,12 +33,13 @@ Answer -:
 
 	1: var introduced in 3.0 and this is strongly types value is checked at compile time
 		Example : var value="Farukh" // Assign as string at compile time
+		i.e : value of the variable type is checked at compile time
 	2: You cannot Assign var value as global level
 	3:  we cannot pass var as a parameter
 
 	B] Dynamic keyword
 
-	1: variable type is checked at Runtime . 
+	1: variable type is checked at Runtime bypass compile time checking . 
 	2: You can assign value as global variable.
 	3: pass parameter as dynamic.
 
@@ -45,7 +47,7 @@ Answer -:
 Question 4: Difference between readonly and const ?
 
 Answer : 
-	constant -:  
+	constant -: const keyword is used 
 	1: value must be declare at the time of initilization it cannot be changed
 	2: constant value cannot be reinitilize 
 
@@ -82,7 +84,7 @@ Answer -:
 
 	2] For each loop -:
 		- Statement repeats a group of embedded statements for each element in an array or an object collection
-		- No need to specify limit bound .
+		- No need to specify limit bound.
 
 		imp -:
 			1: break - it is used to jump outside the loop after condition satisfy
@@ -97,7 +99,7 @@ Answer -:
 											----
 											----
 
-1] Abstraction -: 
+1] Abstraction -: Show only necessary for user
 
 2] Polymorphism -:
 	- According to input of object output value changes
@@ -118,14 +120,14 @@ Answer -:
 	   5: public - Access anywhere 
 
 4] Inheritence -:
-	- Process of inheriting fron one class (parent) to another class (child class) with intention of
+	- Process of inheriting from one class (parent) to another class (child class) with intention of
 	  code Extensibility and Reusability
 
 	- Types of inheritence
 	1: Single inheritence -: one parent class and its child class
-	2: multilevel inheritence
-	3: Hhierarchical inheritence
-	4: Multiple inheritence
+	2: multilevel inheritence -: one parent class has one child class and go on
+	3: Hhierarchical inheritence-: one Base class has multiple child classS
+	4: Multiple inheritence -: two parent base class having same child class
 	5: Hybrid inheritence
 
 	Note : c# doesnt support multiple and hybrid inheritence bcoz of diamond problem i.e ambuiguity arises
@@ -199,9 +201,8 @@ Answer :
 			- same function name with different input signature of parameter irrespective of their return type.
 			  i.e number of parameter , datatype of parameter , change the order of parameter
 			- Method overloding always take place in same class.
-			-
 			- Method name should vary with number of types of parameter and return type .
-			- static polymorphism is checked at compile time. i.e syntax checking 
+			- static polymorphism or method overloading is checked at compile time. i.e syntax checking 
 
 
 Note : what is the output ?
@@ -256,7 +257,7 @@ Answer :
 		A] Implicit interface
 		B] Explicit interface :
 				- it solve the problem of multiple inheritence in c# .
-				- when two interface contain same method which method interface is implemented inside child classes id done
+				- when two interface contain same method which method interface is implemented inside child classes is done
 				  with the help of explicit interface in c#.
 
 
@@ -265,7 +266,7 @@ Question 17 : Difference between interface and Abstract ?
 					Abstract											Interface
 
 1: Does not support Multiple inheritence					1: Support Multiple inheritence 
-2: Concrete method is allowed .								2: Concreete method i.e non abstract method not allowed
+2: Concrete method is allowed .								2: Concrete method i.e non abstract method not allowed
 3: Can have access modifiers for member .					3: Can not have access modifiers for members .
 4: Fields and Constants can be defined .					4: No Fields and constants can defined	
 5: if u want to increase Reusabiltity using					5: Interface are used to define contract,
@@ -277,6 +278,7 @@ Question 17 : Difference between interface and Abstract ?
 
 	Note -:
 	- An Abstract class is class that is declared abstract , it may or may not be include abstract methods
+		i.e contain al least one abstract method
 	- Abstract classes cannot be instantiated . but can have constructor 
 	- Abstract method must be implemented in subclass .
 
@@ -394,6 +396,12 @@ Answer -:
 	- The ref and out keyword in c# is used for the passing the argument to methods as a reference type .
 	- By default parameters are passed as val type .
 	- Both ref and out are  treated diffrently at the run time  and they treated same at compile time .
+
+- Point 1 : Out and Ref are c keyword helps to pass variable by References
+- Point 2 : Data sent from caller to callee and vice versa it affects the value 
+			ref is two way from caller to callee and vice versa back
+- Point 3 : Data sent from the caller has been discarded and its mandatory to intialize the variable inside the callee
+			Out is one way from callee to called
 	
 
 
@@ -413,17 +421,18 @@ Answer -:
 
 Question 27 : What is Exception ?
 Answer -: 
-		- Unintentional error occurred while application is Running .
+		- Unintentional error occurred while application is Running  then after Exception Application Crashed.
 	Foe example -: An attempt to read a file that does not exists or try to read database table that does not exist .
 		- Exception is class and Every exception in c# inherits from System.Exception class.
 
 	Types of Exception -:
-			1: System Exception
-			2: Application or custom level exception .
+			1: System Exception -: Exception coming from .NET Framework itself
+			2: Application or custom level exception -: Developer create Exception for particular Applications..
 
 Question 28 : What is advantage of exception Handling ?
 Answer -: 
 	- Exception handling helps to access system health .
+	- to get User Fraendly Error occur show user understand Quickly
 	- Showing unhandled exception to user is not recommended security reason which open hole for hackers to hack application 
 	  as it gives the stack trace .
 	- Genuine user might not understand exception message and looks irritating .
@@ -435,7 +444,9 @@ Answer -: Try--catch--Finally
 Question 30 : Can we have only try block ?
 Answer -: no , we can not have only try block it must be followed try -- catch or finally block at least i.e try -- finally .
 
-	Note -: Exception is class and Every exception in c# inherits from System.Exception .and it can handle all type of Exception
+	Note -: 
+	-Exception is class and Every exception in c# inherits from System.Exception .and it can handle all type of Exception
+	- Finally block always execute
 
 Question 31 : Can we have multiple catch block ?
 Answer -: Yes , but at a time only one exception will be executed .
@@ -471,6 +482,8 @@ Answer :
 Questions 35 : Advantage 
 	- Code Reused , type safety and performance 
 	- Create generic class with constraints .
+
+	Example : compare logic separate from any datatypes whether is int or string
 	
 	Note : Constraints in Generics 
 		
@@ -550,14 +563,14 @@ Answer -:
 
 
 	Note  - : 
-		1: if the delegate has return type other than void and if the delegate is a multicas delegate, only the value of the 
+		1: if the delegate has return type other than void and if the delegate is a multicast delegate, only the value of the 
 			last invoked method will be returned .
 		2: GetInvocationlist() function gives you list of subscribed function to delegates .
 
 Question 40: Where do you use Multicast Delegates ?
 Answer -: Observer design patteren also termed as publish / subscribe patteren .
 
-Question 41 : Inbuilt delegates provided by .Net Framework ?
+Question 41 : Inbuilt delegates provided by .Net Framework ? or Generic delegate ?
 Answer -: 
 	- Action : function does not return any value .
 	- Predicate : function return bool value .

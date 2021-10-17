@@ -5,9 +5,9 @@ using System.Text;
 namespace ConsoleProgramme._22._Delegates_Folder._2._Inbuilt_delegates_example
 {
     public delegate void MyDelegate(string name);
-   /* class InbuiltDelegateClass2
+    class InbuiltDelegateClass2
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             // Action : void
             Action mydel = Display;
@@ -20,10 +20,10 @@ namespace ConsoleProgramme._22._Delegates_Folder._2._Inbuilt_delegates_example
 
             // Func : input type , output type
             Func<int, int, string> myfun = Calculate;
-            Console.WriteLine(myfun.Invoke(12,56));
+            Console.WriteLine(myfun.Invoke(12, 56));
 
             Console.ReadKey();
-        }
+        }*/
 
         private static string Calculate(int arg1, int arg2)
         {
@@ -39,5 +39,5 @@ namespace ConsoleProgramme._22._Delegates_Folder._2._Inbuilt_delegates_example
         {
             Console.WriteLine(" This is Action delegate method !! ");
         }
-    }*/
+    }
 }

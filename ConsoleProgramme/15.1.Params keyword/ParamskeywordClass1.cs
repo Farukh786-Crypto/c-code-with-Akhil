@@ -4,18 +4,18 @@ using System.Text;
 
 namespace ConsoleProgramme._15.Params_keyword
 {
-    /*class ParamskeywordClass1
+    class ParamskeywordClass1
     {
-        static void Main(string[] args)
+       /* static void Main(string[] args)
         {
             Console.WriteLine(calculate1(12, 12, 45));
-            Console.WriteLine(calculate2(12, 12, 45,46));
+            Console.WriteLine(calculate2(12, 12, 45, 46));
 
             // with params
-            Console.WriteLine("with params "+calculate2(12, 12, 45, 46));
+            Console.WriteLine("with params " + calculate2(12, 12, 45, 46));
 
             Console.ReadKey();
-        }
+        }*/
         // with params
         private static int calculate(params int[] params1)
         {
@@ -36,6 +36,6 @@ namespace ConsoleProgramme._15.Params_keyword
         {
             return v1 + v2 + v3 + v4;
         }
-      
-    }*/
+
+    }
 }

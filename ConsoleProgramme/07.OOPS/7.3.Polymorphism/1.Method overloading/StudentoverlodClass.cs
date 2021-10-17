@@ -45,8 +45,8 @@ namespace ConsoleProgramme._7.OOPS._7._3.Polymorphism._1.Method_overloading
             StudentoverlodClass studentoverlodClass = new StudentoverlodClass();
             studentoverlodClass.GetAdmission();
             studentoverlodClass.GetAdmission(1);
-            studentoverlodClass.GetAdmission(2,"Farukh");
-            studentoverlodClass.GetAdmission("Akshay",3);
+            studentoverlodClass.GetAdmission(2, "Farukh");
+            studentoverlodClass.GetAdmission("Akshay", 3);
 
             Console.ReadKey();
         }

@@ -33,7 +33,7 @@ namespace ConsoleProgramme._19.Exception_Folder._1.Examples
             }
         }
     }
-    /*class Mainclass
+  /*  class Mainclass
     {
         static void Main(string[] args)
         {

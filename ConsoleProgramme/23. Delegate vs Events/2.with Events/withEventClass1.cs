@@ -18,7 +18,7 @@ namespace ConsoleProgramme._23._Delegate_vs_Events._2.with_Events
     }
     class withEventClass1
     {
-        static void Main(string[] args)
+       /* static void Main(string[] args)
         {
             CustomEventDemo customEventDemo = new CustomEventDemo();
             customEventDemo.EventRaise += EventRaisedByUser;
@@ -28,10 +28,10 @@ namespace ConsoleProgramme._23._Delegate_vs_Events._2.with_Events
 
             Console.ReadKey();
         }
-
+*/
         private static void EventRaisedByUser(string name)
         {
-            Console.WriteLine(" Process completed by : "+name);
+            Console.WriteLine(" Process completed by : " + name);
         }
     }
 

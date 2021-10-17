@@ -8,9 +8,9 @@ namespace ConsoleProgramme._09.Static._2.Static_class
     {
         public static string FirstName = string.Empty;
 
-        // constructor called only once by CLR
+        //static constructor called only once by CLR
         // cannot contain parameter and access modifier
-        static StaticClass1()
+        static StaticClass1()// static constructor is parameterless and not access modifier
         {
             Console.WriteLine(" Static constructor is called !! ");
         }
@@ -20,7 +20,7 @@ namespace ConsoleProgramme._09.Static._2.Static_class
             Console.WriteLine("This is static method !!");
         }
     }
-  /*  class Program
+    /*class Program
     {
         static void Main(string[] args)
         {

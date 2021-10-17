@@ -17,14 +17,15 @@ namespace ConsoleProgramme._7.OOPS._7._2.Inheritence._2.Multilevel_Inheritence
 
         public void GetAdmission()
         {
-            Console.WriteLine("This is Parent class for admission");
+            Console.WriteLine("This is for Student admission Name is-:"+Name);
         }
     }
+    //sealed class ITStudent1 : MultilevelClass  -- class is not inherited
     class ITStudent1 : MultilevelClass
     {
         public void Display()
         {
-            base.GetAdmission();
+           
             Console.WriteLine("This is child method IT Student Display !!");
         }
     }
@@ -35,15 +36,15 @@ namespace ConsoleProgramme._7.OOPS._7._2.Inheritence._2.Multilevel_Inheritence
             Console.WriteLine("Admission taken for CCNA !!");
         }
     }
-   /*class MainClass
-   {
-       static void Main(string[] args)
-       {
-           HardwareStudent hardwareStudent = new HardwareStudent();
+   /* class MainClass
+    {
+        static void Main(string[] args)
+        {
+            HardwareStudent hardwareStudent = new HardwareStudent();
             hardwareStudent.GetAdmissionForHardwareCCNA();
             hardwareStudent.Display();
             hardwareStudent.GetAdmission();
-           Console.ReadKey();
-       }
-   }*/
+            Console.ReadKey();
+        }
+    }*/
 }

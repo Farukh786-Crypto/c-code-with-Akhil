@@ -5,10 +5,11 @@ using System.Text;
 namespace ConsoleProgramme._22._Delegates_Folder._1._Delegates_Examples
 {
     // step 1: initialize delegates
-    public delegate void MyDelegate(string name);
-   /* class DelegateClass1
+    public  delegate  void MyDelegate(string name);
+    // The keyword static has no meaning for the delegate definition, just like enum or const definitions.
+    class DelegateClass1
     {
-        static void Main(string[] args)
+      /*  static void Main(string[] args)
         {
             // step 2: create object of delegates and just past function name only
             MyDelegate myDelegate = Display;
@@ -27,11 +28,11 @@ namespace ConsoleProgramme._22._Delegates_Folder._1._Delegates_Examples
             }
 
             Console.ReadKey();
-        }
+        }*/
 
         private static void ShowEmployee(string name)
         {
-            Console.WriteLine(" This is Show Employees "+name);
+            Console.WriteLine(" This is Show Employees " + name);
         }
 
         private static void AdmittedEmployees(string name)
@@ -41,7 +42,7 @@ namespace ConsoleProgramme._22._Delegates_Folder._1._Delegates_Examples
 
         private static void Display(string name)
         {
-            Console.WriteLine(" This is display Function !! "+name);
+            Console.WriteLine(" This is display Function !! " + name);
         }
-    }*/
+    }
 }

@@ -11,7 +11,7 @@ namespace ConsoleProgramme._11.Abstract
         {
             Console.WriteLine("Abstract class constructor is called ");
         }
-        // non abstract method / concreete method 
+        // non abstract method / concrete method 
         public void Display()
         {
             Console.WriteLine("This is Concrete method in Student Abstract class");
@@ -29,11 +29,11 @@ namespace ConsoleProgramme._11.Abstract
     }
    /* class Program
     {
-        *//* output 
-        Abstract class constructor is called
-        This is Concrete method in Student Abstract class
-        This method is for Registration
-        *//*
+        //output
+       //Abstract class constructor is called
+        //This is Concrete method in Student Abstract class
+        //This method is for Registration
+
         static void Main(string[] args)
         {
             StudentClass stud = new ItStudent();

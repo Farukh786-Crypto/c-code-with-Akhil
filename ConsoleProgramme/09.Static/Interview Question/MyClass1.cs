@@ -8,20 +8,17 @@ namespace ConsoleProgramme._09.Static.Interview_Question
     {
         public static int x = 10;
         public static void Print()
-        {
-            
+        { 
             x = x + 10;
             Console.WriteLine(x);
         }
     }
-    /*class Program
+   /* class Program
     {
-        *//*Output
+       *//* Output
             20
             30
-            40
-        *//*
-
+            40*//*
         static void Main(string[] args)
         {
             // variable x copy created only one time and then share this value to all 

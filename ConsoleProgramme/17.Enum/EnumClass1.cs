@@ -12,9 +12,9 @@ namespace ConsoleProgramme._17.Enum
         WednesDay=101 ,
         ThursDay
     }
-   /* class EnumClass1
+    class EnumClass1
     {
-        static void Main(string[] args)
+       /* static void Main(string[] args)
         {
             Console.WriteLine((int)Days.SunDay);
 
@@ -24,6 +24,6 @@ namespace ConsoleProgramme._17.Enum
             Console.WriteLine((int)Days.ThursDay);
 
             Console.ReadKey();
-        }
-    }*/
+        }*/
+    }
 }

@@ -13,13 +13,15 @@ namespace ConsoleProgramme._2.Var_and_Dynamic
         public void varFunction()
         {
             var somewhere = "Farukh"; // Assign value datatype at compile time as string
-            // somewhere = 1.1;   // gives error bcoz value is string already at compile time but we try to assign integer
+            //somewhere = 1.1;   // gives error bcoz value is string already at compile time but we try to assign integer after build
+            Console.WriteLine(somewhere);
         }
 
         public void DynamicFunction()
         {
             dynamic somewhere1 = "Akhil"; // value is checked at Runtime 
-           // somewhere1 = 1.1;       // error occur at runtime
+            somewhere1 = 1;      
+            Console.WriteLine(somewhere1);
 
         }
 
@@ -29,11 +31,13 @@ namespace ConsoleProgramme._2.Var_and_Dynamic
 
         }
     }
-    /*class MainClass
+   /* class MainClass
     {
         static void Main(string[] args)
         {
-
+            ProgrammeClass2 programmeClass2 = new ProgrammeClass2();
+            programmeClass2.varFunction();
+            Console.ReadKey();
         }
     }*/
 }

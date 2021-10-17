@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleProgramme._24.Tuples_Folder
 {
-    class TupleClass1
+  /*  class TupleClass1
     {
         static void Main(string[] args)
         {
@@ -22,5 +22,5 @@ namespace ConsoleProgramme._24.Tuples_Folder
 
             Console.ReadKey();
         }
-    }
+    }*/
 }

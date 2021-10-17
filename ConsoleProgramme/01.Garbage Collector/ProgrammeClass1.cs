@@ -7,7 +7,7 @@ namespace ConsoleProgramme._1.Garbage_Collector
     class ProgrammeClass1 : IDisposable
     {
         // constructor
-        public ProgrammeClass1()
+        public ProgrammeClass1() // same name as a class
         {
             // initialization
         }
@@ -24,7 +24,7 @@ namespace ConsoleProgramme._1.Garbage_Collector
             GC.SuppressFinalize(this);
         }
     }
-    /*class MainClass
+   /* class MainClass
     {
         static void Main(string[] args)
         {

@@ -14,14 +14,14 @@ namespace ConsoleProgramme._09.Static.Interview_Question
             Console.WriteLine(x);
         }
     }
-   /* class Program
+    /*class Program
     {
-        *//*Output
+       *//* Output
             20
             30
             20
-            30
-        *//*
+            30*//*
+        
 
         static void Main(string[] args)
         {

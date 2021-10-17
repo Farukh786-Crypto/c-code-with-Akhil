@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleProgramme._09.Static._1.Non_Static_class
 {
-    class NonStaticDemoClass1
+    class NonStaticDemoClass1 // Non-static class
     {
         // static variable
         public static string FirstName = String.Empty;
@@ -34,7 +34,7 @@ namespace ConsoleProgramme._09.Static._1.Non_Static_class
             Console.WriteLine(" This is Registration method of Student class !! ");
         }
     }
-   /* class Program
+    /*class Program
     {
         static void Main(string[] args)
         {
@@ -45,7 +45,7 @@ namespace ConsoleProgramme._09.Static._1.Non_Static_class
             NonStaticDemoClass1 demo2 = new NonStaticDemoClass1();
             demo1.Registration();
 
-            // Access static method
+            // Access static method by using classname.
 
             NonStaticDemoClass1.Display();
 

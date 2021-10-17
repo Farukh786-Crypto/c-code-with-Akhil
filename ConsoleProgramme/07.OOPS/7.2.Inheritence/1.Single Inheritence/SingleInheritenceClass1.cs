@@ -24,11 +24,11 @@ namespace ConsoleProgramme._7.OOPS._7._2.Inheritence._1.Single_Inheritence
     {
         public void Display()
         {
-            base.GetAdmission();
+            base.GetAdmission();// called parent class method
             Console.WriteLine("This is child method IT Student Display !!");
         }
     }
-    /*class MainClass
+   /* class MainClass
     {
         static void Main(string[] args)
         {

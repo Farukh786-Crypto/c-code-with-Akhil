@@ -20,12 +20,12 @@ namespace ConsoleProgramme._14.String_and_StringBuilder
             StringBuilder sb = new StringBuilder();
             sb.Append("Hello");
             sb.Append("Farukh");
-            sb.Append("How are You");
+            sb.Append("How are You?");
 
             Console.WriteLine(sb);
         }
     }
-    /*class MainClass
+   /* class MainClass
     {
         static void Main(string[] args)
         {

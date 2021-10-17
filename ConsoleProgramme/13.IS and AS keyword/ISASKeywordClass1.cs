@@ -22,7 +22,7 @@ namespace ConsoleProgramme._13.IS_and_AS_keyword
             Console.WriteLine("My name is :" + name);
         }
     }
-   /* class Program
+  /*  class Program
     {
         static void Main(string[] args)
         {
