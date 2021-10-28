@@ -24,7 +24,7 @@ namespace ConsoleProgramme._1.Garbage_Collector
             GC.SuppressFinalize(this);
         }
     }
-   /* class MainClass
+  /*  class MainClass
     {
         static void Main(string[] args)
         {

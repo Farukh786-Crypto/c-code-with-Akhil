@@ -130,7 +130,7 @@ Answer -:
 	4: Multiple inheritence -: two parent base class having same child class
 	5: Hybrid inheritence
 
-	Note : c# doesnt support multiple and hybrid inheritence bcoz of diamond problem i.e ambuiguity arises
+	Note : c# doesn't support multiple and hybrid inheritence bcoz of diamond problem i.e ambuiguity arises
 	    but we can achieve with the help of interface . 
 		
 
@@ -163,6 +163,7 @@ Answer :
 	- Constructor is special member function of class whos name is exactly match with class name .
 	- it is use to initialize the variable inside the class with default value .
 	- it does not contain any return type
+	
 	Example :
 			class Example 
 			{
@@ -278,7 +279,7 @@ Question 17 : Difference between interface and Abstract ?
 
 	Note -:
 	- An Abstract class is class that is declared abstract , it may or may not be include abstract methods
-		i.e contain al least one abstract method
+		i.e contain at least one abstract method
 	- Abstract classes cannot be instantiated . but can have constructor 
 	- Abstract method must be implemented in subclass .
 
@@ -605,16 +606,48 @@ Answer - :
 - Members of Tuple are ReadOnly . and tuple is static class .
 
 
+---------------------------------------------------------------------------------------------------------------------------------
+
+Questions : What is the Covariance vs Contravariance ?
+Answer :
+	Covariance
+	----------
+
+- when you want to pass child collection to parent reference collection covariance is used using out keyword
+- Covariance preserve assignment compatibility between parent and child relationship during dynamic polymorphism
 
 
 
+- When you want to pass child delegates to parent delegates using in keyword we achieve contravariance	
 
 
+--------------------------------------------------------------------------------------------------------------------
+									checked and unchecked in c#
+
+	- when int value is more than interger maxvalue checked is used and throw overflow exception 
+	Example :
+		class Program{
+			static void Main(){
+				int a=123455678;
+				int b=12345678;
+
+				int c=(checked)a+b; // throe overflow exception
+			}
+		}
 
 
+	- unchcked is used for const variable show error at compile time to bypass this inchecked keyword is used
 
 
+	Example :
+		class Program{
+			static void Main(){
+				const int a=123455678;
+				const int b=12345678;
 
+				int c=(checked)a+b; 
+			}
+		}
 	
 
 
