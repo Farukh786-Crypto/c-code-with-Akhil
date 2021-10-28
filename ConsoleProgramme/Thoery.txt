@@ -636,7 +636,7 @@ Answer :
 		}
 
 
-	- unchcked is used for const variable show error at compile time to bypass this inchecked keyword is used
+	- unchecked is used for const variable show error at compile time to bypass this inchecked keyword is used
 
 
 	Example :
@@ -645,7 +645,7 @@ Answer :
 				const int a=123455678;
 				const int b=12345678;
 
-				int c=(checked)a+b; 
+				int c=(unchecked)a+b; 
 			}
 		}
 	
