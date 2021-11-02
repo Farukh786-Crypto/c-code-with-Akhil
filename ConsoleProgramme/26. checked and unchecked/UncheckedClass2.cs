@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleProgramme._26._checked_and_unchecked
 {
-    class UncheckedClass2
+   /* class UncheckedClass2
     {
         static void Main(string[] args)
         {
@@ -16,5 +16,5 @@ namespace ConsoleProgramme._26._checked_and_unchecked
 
             int d = unchecked(a + b);  // gives overflow Exceptions
         }
-    }
+    }*/
 }

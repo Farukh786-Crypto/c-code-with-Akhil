@@ -131,7 +131,7 @@ Answer -:
 	5: Hybrid inheritence
 
 	Note : c# doesn't support multiple and hybrid inheritence bcoz of diamond problem i.e ambuiguity arises
-	    but we can achieve with the help of interface . 
+	    but we can achieve with the help of interface. 
 		
 
 Question 8 : Abstraction vs Encapsulation
@@ -236,7 +236,8 @@ Answer : it is function overloading Example. same function name with different i
 
 
 Question 15 : What is Method Hiding ?
-Answer :
+Answer : Change the whole element of parent class member is change inside child class i.e complete replacement in child class
+	by hiding the parent member is donr in Method Hiding
 
 
 
@@ -296,11 +297,11 @@ Answer :
 		- static member are stored in a special area inside the heap called "High Frequency Heap".
 		- A c# static class is a class that can not be instantiated .
 		- A static class contain static member only .
-		- Non static class contain static as well as non-static member .
+		- Non static class contain static as well as non-static member.
 		- Any class can have static constructor which is automatically called once while first instantiation of class 
 		- We cannot call static constructor explicitly .
 		- static constructor is always parameterless bcoz it call implicitly by CLR 
-		- static constructor doesnt contain access modifier .
+		- static constructor does not contain access modifier .
 		- Static member should be called with classname . operator 
 
 
