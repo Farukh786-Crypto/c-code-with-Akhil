@@ -304,6 +304,8 @@ Answer :
 		- static constructor does not contain access modifier .
 		- Static member should be called with classname . operator 
 
+		Note : what are different classes :
+			Partial class, sealed class, static class, abstract class , interface class
 
 Question 19 : Partial keyword in c#
 Answer : 
