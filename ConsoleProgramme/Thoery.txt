@@ -315,7 +315,7 @@ Answer :
 	  like one creating logic and other working in designer parts in asp.net
 
 	- We can have partial method inside partial class i.e declare method at one place and give body to another file 
-	  where we have same
+	  where we have same i.e implement in another same class name
 
 Note : 
 	1] Sealed property -: if a partial class is sealed then the entire class will be sealed .
@@ -436,7 +436,7 @@ Answer -:
 Question 28 : What is advantage of exception Handling ?
 Answer -: 
 	- Exception handling helps to access system health .
-	- to get User Fraendly Error occur show user understand Quickly
+	- to get User Friendly Error occur show user understand Quickly
 	- Showing unhandled exception to user is not recommended security reason which open hole for hackers to hack application 
 	  as it gives the stack trace .
 	- Genuine user might not understand exception message and looks irritating .
