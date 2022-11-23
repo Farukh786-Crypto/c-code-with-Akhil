@@ -15,7 +15,7 @@ Answer -:
 	1: Finalize(Destructor) and Dispose both are used for clearing Unmanaged Resourse
 	2: Finalize is bit expensive because it is called by GC(Garbage Collector) i.e Finalize is undeterminastic. 
 	   GC maintain a separate queue/array when it adds 
-	   all Object which has finalized implemented . and Dispose is implemented using IDispose interface by programmer i.e Dispose is determinastic.
+	   all Object which has finalized implemented . and Dispose is implemented using IDisposable interface by programmer i.e Dispose is determinastic.
 	3: It is always recommended that, one should not implement Finalize method until it is extreamly necessary. First priority
 	   should always be to implement the Dispose method and clean unmanged Resources
 
@@ -178,41 +178,6 @@ Question 12 : Can a static class be inherited ?
 Answer : No static class cannot be inherited . static class can not be parent or child .
 
 
-Question 13 : What is constructor ?
-Answer : 
-	- Constructor is special member function of class whos name is exactly match with class name .
-	- it is use to initialize the variable inside the class with default value .
-	- it does not contain any return type
-	
-	Example :
-			class Example 
-			{
-				// constrctor
-				public Example 
-				{
-					// initialize the variable default value .
-				}
-			}
-
-
-	- when class object is created constructor is automatically called .
-	- we cannot assign static constructor any acces modifier bcoz is bydefault public .
-		
-	Example -:
-	static class StudentstaticClass1
-    {
-        // static class contain only static member only.
-        static StudentstaticClass1()
-        {
-            Console.WriteLine("Static constructor is called !!");
-        }
-        public static void GetAdmission()
-        {
-            Console.WriteLine("This is parent class for Admission Id");
-        }
-    }
-
-
 Question 14: What is Polymorphism ? Types of Polymorphism ? Benefits of Polymorphism ?
 Answer : 
 	- Polymorphism is greek word,meaning "One name many forms" .
@@ -255,9 +220,45 @@ Answer : it is function overloading Example. same function name with different i
 	3: Single variable in rewritten code be used to store multiple datatypes 
 
 
+
 Question 15 : What is Method Hiding ?
 Answer : Change the whole element of parent class member is change inside child class i.e complete replacement in child class
 	by hiding the parent member is done in Method Hiding
+
+
+Question 13 : What is constructor ?
+Answer : 
+	- Constructor is special member function of class whos name is exactly match with class name .
+	- it is use to initialize the variable inside the class with default value .
+	- it does not contain any return type
+	
+	Example :
+			class Example 
+			{
+				// constrctor
+				public Example 
+				{
+					// initialize the variable default value .
+				}
+			}
+
+
+	- when class object is created constructor is automatically called .
+	- we cannot assign static constructor any acces modifier bcoz is bydefault public .
+		
+	Example -:
+	static class StudentstaticClass1
+    {
+        // static class contain only static member only.
+        static StudentstaticClass1()
+        {
+            Console.WriteLine("Static constructor is called !!");
+        }
+        public static void GetAdmission()
+        {
+            Console.WriteLine("This is parent class for Admission Id");
+        }
+    }
 
 
 	
