@@ -21,7 +21,7 @@ namespace ConsoleProgramme._09.Static.Interview_Question
             40*//*
         static void Main(string[] args)
         {
-            // variable x copy created only one time and then share this value to all 
+            // variable x copy created only one time and then share this value to all object
 
             MyClass1.Print();
             MyClass1.Print();

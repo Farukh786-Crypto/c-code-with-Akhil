@@ -24,8 +24,7 @@ namespace ConsoleProgramme._7.OOPS._7._2.Inheritence._2.Multilevel_Inheritence
     class ITStudent1 : MultilevelClass
     {
         public void Display()
-        {
-           
+        {      
             Console.WriteLine("This is child method IT Student Display !!");
         }
     }

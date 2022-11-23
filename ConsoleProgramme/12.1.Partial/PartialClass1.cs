@@ -10,7 +10,7 @@ namespace ConsoleProgramme._12.Partial
         public string name { get; set; }
 
         // partial method is bydefault private 
-        partial void Registration() // partial method 
+        partial void Registration() // partial method body
         {
             Console.WriteLine("This is for Registration !!");
         }

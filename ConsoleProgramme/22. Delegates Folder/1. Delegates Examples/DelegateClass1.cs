@@ -5,11 +5,12 @@ using System.Text;
 namespace ConsoleProgramme._22._Delegates_Folder._1._Delegates_Examples
 {
     // step 1: initialize delegates
-    public  delegate  void MyDelegate(string name);
+    // note same return type as like functions of following class and same number of parameter
+    public delegate void MyDelegate(string name);
     // The keyword static has no meaning for the delegate definition, just like enum or const definitions.
     class DelegateClass1
     {
-      /*  static void Main(string[] args)
+      /*static void Main(string[] args)
         {
             // step 2: create object of delegates and just past function name only
             MyDelegate myDelegate = Display;

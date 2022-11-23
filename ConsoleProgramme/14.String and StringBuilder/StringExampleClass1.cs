@@ -9,7 +9,7 @@ namespace ConsoleProgramme._14.String_and_StringBuilder
         public void Functionstring()
         {
             String str = "Hello";
-            // string is immutable hence . it create new strings instance when we concate .
+            // string is immutable hence . it create new strings object instance when we concate .
 
             str += "Farukh";
             str += "How are You?";

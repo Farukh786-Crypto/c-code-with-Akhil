@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleProgramme._19.Exception_Folder._2.UserDefined_Exception
 {
-    class MyException : Exception
+    class MyException : Exception // Exception is class which is inherited
     {
         public MyException(string str)
         {

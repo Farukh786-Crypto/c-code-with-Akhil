@@ -9,16 +9,17 @@ namespace ConsoleProgramme._09.Static._1.Non_Static_class
         // static variable
         public static string FirstName = String.Empty;
         
-        // static constructor called only once
+        // static constructor called only once does not access modifier and parameter
+        // static constructor is parameterless i.e it cannot be overloded
         static NonStaticDemoClass1()
         {
-            Console.WriteLine(" Non static constructor ");
+            Console.WriteLine(" static constructor ");
         }
 
         // non-static class constructor called when class object is created 
         public NonStaticDemoClass1()
         {
-            Console.WriteLine(" static constructor ");
+            Console.WriteLine("Non static constructor ");
         }
 
 

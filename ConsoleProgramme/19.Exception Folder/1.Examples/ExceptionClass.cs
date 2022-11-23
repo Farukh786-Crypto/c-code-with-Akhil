@@ -16,7 +16,9 @@ namespace ConsoleProgramme._19.Exception_Folder._1.Examples
                 Console.WriteLine(sr.ReadToEnd());
 
             }
-            catch(FileNotFoundException ex)
+            // Note: if u want to write user defined exception then write above Catch(Exception ex) not after below method
+            // o.w it is not run bcoz All type of exception class is Handled by Catch(Exception ex) method
+            catch (FileNotFoundException ex) 
             {
                 Console.WriteLine("File does not exist !!" + ex.Message);
 

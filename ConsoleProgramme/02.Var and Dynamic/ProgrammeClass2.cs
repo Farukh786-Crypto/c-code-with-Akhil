@@ -20,7 +20,7 @@ namespace ConsoleProgramme._2.Var_and_Dynamic
         public void DynamicFunction()
         {
             dynamic somewhere1 = "Akhil"; // value is checked at Runtime 
-            somewhere1 = 1;      
+            somewhere1 = 1;  // it gives error at run time not compile time    
             Console.WriteLine(somewhere1);
 
         }

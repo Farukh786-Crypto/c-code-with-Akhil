@@ -17,7 +17,7 @@ namespace ConsoleProgramme._7.OOPS._7._3.Polymorphism._1.Method_overloading
             Console.WriteLine("Get admission based on Student Id :"+studentId);
         }
         // Error return type doesnt matter if parameter and its datatype are same
-        /*  public int GetAdmission(int studentId)
+        /*public int GetAdmission(int studentId)
           {
               return studentId;
           }*/
@@ -32,7 +32,7 @@ namespace ConsoleProgramme._7.OOPS._7._3.Polymorphism._1.Method_overloading
         {
             Console.WriteLine("Get Admission based on Student Id :"+ studentId +"Student Name :"+ name);
         }
-        // change order od parameter
+        // change order of parameter
         public void GetAdmission(string name, int studentId)
         {
             Console.WriteLine("Get Admission based on Student Id :" + studentId + "Student Name :" + name);

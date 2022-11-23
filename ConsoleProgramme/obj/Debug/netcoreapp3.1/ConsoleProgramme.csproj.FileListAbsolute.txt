@@ -38,3 +38,17 @@ E:\Youtube Videos\code with Akhil\code with Akhil\cSharp-code-with-Akhil\Console
 E:\Youtube Videos\code with Akhil\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.pdb
 E:\Youtube Videos\code with Akhil\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.genruntimeconfig.cache
 E:\Youtube Videos\code with Akhil\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.csproj.AssemblyReference.cache
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.exe
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.deps.json
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.runtimeconfig.json
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.runtimeconfig.dev.json
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.dll
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\bin\Debug\netcoreapp3.1\ConsoleProgramme.pdb
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.csproj.AssemblyReference.cache
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.GeneratedMSBuildEditorConfig.editorconfig
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.AssemblyInfoInputs.cache
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.AssemblyInfo.cs
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.csproj.CoreCompileInputs.cache
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.dll
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.pdb
+E:\Youtube Videos\code with Akhil [IMP]\code with Akhil\cSharp-code-with-Akhil\ConsoleProgramme\obj\Debug\netcoreapp3.1\ConsoleProgramme.genruntimeconfig.cache

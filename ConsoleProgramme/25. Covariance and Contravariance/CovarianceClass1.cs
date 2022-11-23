@@ -21,6 +21,7 @@ namespace ConsoleProgramme._25._Covariance_and_Contravariance
         static void Main(string[] args)
         {
             // valid statement
+            // pass parent base class reference
             Animal obj1 = new Dog();
             obj1 = new Cat();
 

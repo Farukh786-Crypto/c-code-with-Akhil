@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ConsoleProgramme._11.Abstract
 {
+    // abstract class shows with abstract keyword
     abstract class StudentClass
     {
         // Abstract class contain constructor but class doesnt instantiated
@@ -17,12 +18,12 @@ namespace ConsoleProgramme._11.Abstract
             Console.WriteLine("This is Concrete method in Student Abstract class");
         }
 
-        // abstract method it is half defined metod which must be implemented inside child class
-        public abstract void Registration();
+        // abstract method it is half defined method which must be implemented inside child class
+        public abstract void Registration();// must be implemented in child class
     }
     class ItStudent : StudentClass
     {
-        public override void Registration()
+        public override void Registration() // override keyword is used
         {
             Console.WriteLine("This method is for Registration");
         }

@@ -7,7 +7,7 @@ namespace ConsoleProgramme._3.Readonly_and_constant
     class ProgrammeClass3
     {
         // readonly and constant
-
+         
         // constant : value must be declare at the time of initilization it cannot be changed throught the programme
         // constant value cannot be reinitilize
         public const string myconstvalue = "Akhil";

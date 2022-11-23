@@ -18,7 +18,7 @@ namespace ConsoleProgramme._18.Yield_keyword
 
         private static IEnumerable<object> GetEvenNos(int v)
         {
-            for (int i = 0; i < v; i++)
+            for(int i = 0; i < v; i++)
             {
                 if (i % 2 == 0)
                 {

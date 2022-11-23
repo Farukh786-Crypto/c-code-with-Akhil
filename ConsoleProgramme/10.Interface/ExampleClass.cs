@@ -6,7 +6,8 @@ namespace ConsoleProgramme._10.Interface
 {
     interface IStudent
     {
-        void Display();
+        // no access modifier
+        void Display(); // no need to use abstract keyword 
     }
     interface IITStudent
     {
@@ -14,7 +15,7 @@ namespace ConsoleProgramme._10.Interface
     }
     class StudentClass : IStudent, IITStudent
     {
-        public void Display()
+        public void Display() // no need to use override keyword
         {
             Console.WriteLine("IStudent Display method is called !!");
         }
@@ -29,8 +30,6 @@ namespace ConsoleProgramme._10.Interface
     {
         static void Main(string[] args)
         {
-
-
             // interface reference  nut not be instantiated .
             IStudent student = new StudentClass();
             student.Display();

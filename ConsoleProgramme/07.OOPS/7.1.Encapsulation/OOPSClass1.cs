@@ -8,7 +8,6 @@ namespace ConsoleProgramme._7.OOPS._7._1.Encapsulation
     {
         public int StudId { get; set; }
         private string _name;
-
         public string Name
         {
             get { return string.Concat("Mr/Mrs "+_name); }

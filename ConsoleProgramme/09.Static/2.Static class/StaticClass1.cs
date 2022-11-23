@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ConsoleProgramme._09.Static._2.Static_class
 {
+    // static class
     static class StaticClass1
     {
         public static string FirstName = string.Empty;
@@ -14,7 +15,6 @@ namespace ConsoleProgramme._09.Static._2.Static_class
         {
             Console.WriteLine(" Static constructor is called !! ");
         }
-
         public static void Display()
         {
             Console.WriteLine("This is static method !!");

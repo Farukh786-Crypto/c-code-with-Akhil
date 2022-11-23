@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Youtube Videos\\code with Akhil\\code with Akhil\\cSharp-code-with-Akhil\\ConsoleProgramme\\ConsoleProgramme.csproj",
+      "projectUniqueName": "F:\\Questpond\\2.c#\\C# code with Akhil\\code with Akhil\\cSharp-code-with-Akhil\\ConsoleProgramme\\ConsoleProgramme.csproj",
       "projectName": "ConsoleProgramme",
-      "projectPath": "E:\\Youtube Videos\\code with Akhil\\code with Akhil\\cSharp-code-with-Akhil\\ConsoleProgramme\\ConsoleProgramme.csproj",
+      "projectPath": "F:\\Questpond\\2.c#\\C# code with Akhil\\code with Akhil\\cSharp-code-with-Akhil\\ConsoleProgramme\\ConsoleProgramme.csproj",
       "packagesPath": "C:\\Users\\ULTIMATE\\.nuget\\packages\\",
-      "outputPath": "E:\\Youtube Videos\\code with Akhil\\code with Akhil\\cSharp-code-with-Akhil\\ConsoleProgramme\\obj\\",
+      "outputPath": "F:\\Questpond\\2.c#\\C# code with Akhil\\code with Akhil\\cSharp-code-with-Akhil\\ConsoleProgramme\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.414\\RuntimeIdentifierGraph.json"
       }
     }
   }

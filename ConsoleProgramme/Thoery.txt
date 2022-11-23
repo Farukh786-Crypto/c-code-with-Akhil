@@ -9,9 +9,13 @@
 
 Questions 1 : What is the difference between Finalize and Dispose method in terms of memory management?
 Answer -: 
+	
+	Note -: for cleaning managed resources GC is used 
+	
 	1: Finalize(Destructor) and Dispose both are used for clearing Unmanaged Resourse
-	2: Finalize is bit expensive because it is called by GC(Garbage Collector). GC maintain a separate queue/array when it adds 
-	   all Object which has finalized implemented . and Dispose is implemented using IDispose interface by programmer.
+	2: Finalize is bit expensive because it is called by GC(Garbage Collector) i.e Finalize is undeterminastic. 
+	   GC maintain a separate queue/array when it adds 
+	   all Object which has finalized implemented . and Dispose is implemented using IDispose interface by programmer i.e Dispose is determinastic.
 	3: It is always recommended that, one should not implement Finalize method until it is extreamly necessary. First priority
 	   should always be to implement the Dispose method and clean unmanged Resources
 
@@ -26,10 +30,10 @@ Answer -: Yes i.e GC.Collect() .
 
 	** Class must implement IDisposable interface in order to use "Using" Block.
 
-
+	 
 Question 3: Difference between var and Dynamic ?
 Answer -:
-	A] Var keyword
+	A] Var keyword (Early Bind)
 
 	1: var introduced in 3.0 and this is strongly types value is checked at compile time
 		Example : var value="Farukh" // Assign as string at compile time
@@ -37,11 +41,18 @@ Answer -:
 	2: You cannot Assign var value as global level
 	3:  we cannot pass var as a parameter
 
-	B] Dynamic keyword
-
+	B] Dynamic keyword (Late Bind)
+	Note : invoked member at run time
 	1: variable type is checked at Runtime bypass compile time checking . 
 	2: You can assign value as global variable.
 	3: pass parameter as dynamic.
+
+	Note : 
+	- Dynamic used Reflection internally . Reflection define object member using . operator and also invoke member of Object or assembly
+	Ex: when we used visyal studio if we type String. (All member of String class such as .ToUpper() and ToLower() are shown) inside Visual
+	studio intelligense used Reflections.and call particular method .
+
+	- Dynamic only invokes object of member class
 
 
 Question 4: Difference between readonly and const ?
@@ -65,13 +76,13 @@ Answer :
 	2: Arithmetic Operator -:
 			- If u want to perform some arithmetic operation.
 	3: Comparison Operator -: 
-			- If u want to compare to variable
+			- If u want to compare two variable
 	4: Conditional Operator -:
 			- if u want to compare two comparison operator
 	5: Ternary Operator -: 
 			- Syntax : (Condition)?"output1":"output2";
 
-Question 6: What ARE Different Decision Making Statement ?
+Question 6: What Are Different Decision Making Statement ?
 Answer : 
 	1] If else Statement -: 
 
@@ -149,7 +160,16 @@ Question 10 : In case of inheritence what is sequence of constructor that gets c
 Answer -: 
 	- Parent constructor gets called first then subsequent child constructor .
 	- if both the class parent and child contain static constructor then 
-	  first child constructor is called then parent constructor .
+	  first child static constructor is called then parent static constructor .
+	- for initialization of variable in child class called then parent initialization variable is called 
+
+
+	Note :
+		
+	1> constructor -: parent constructor ---> child constructor
+	2> static consrictor : child static constructor --- > parent static constructor 
+	3> variable initialization : child class variable --- > parent class variable
+
 
 Question 11 : How to restrict any class to inherit further ?
 Answer : Use sealed keyword against class.
@@ -206,7 +226,7 @@ Answer :
 			- static polymorphism or method overloading is checked at compile time. i.e syntax checking 
 
 
-Note : what is the output ?
+Note : what is the output?
 
 	class StudentoverlodClass
 	{
@@ -227,7 +247,7 @@ Answer : it is function overloading Example. same function name with different i
 	2] Late Binding/dynamic(RunTime) polymorphism/Method overriding -: 
 		- Method overriding also knows as RunTime polymorphism .
 		- reimplementation of parent class method inside child class 
-		  with same function name with same  parameter and same return type . exctly match just code inside function different 
+		  with same function name with same  parameter and same return type . exactly match just code inside function different 
 
 	** Benefits of polymorphism **
 	1: Code Reusability and simplicity i.e classes once written tested and implemented can be reused as required .
@@ -237,7 +257,31 @@ Answer : it is function overloading Example. same function name with different i
 
 Question 15 : What is Method Hiding ?
 Answer : Change the whole element of parent class member is change inside child class i.e complete replacement in child class
-	by hiding the parent member is donr in Method Hiding
+	by hiding the parent member is done in Method Hiding
+
+
+	
+Question 18 : Static keyword in c# 
+Answer : 
+	- We use static keyword in order to make variable class or function of type static .
+	- Static keyword when used ensure that only one instance is created .
+
+	Static variable -: single copy is created and shared among all objects at the class level . 
+
+	static class -: 
+		- A static class is created using the "static" keyword in c# .
+		- static member are stored in a special area inside the heap called "High Frequency Heap".
+		- A c# static class is a class that can not be instantiated .
+		- A static class contain static member only .
+		- Non static class contain static as well as non-static member.
+		- Any class can have static constructor which is automatically called once while first instantiation of class 
+		- We cannot call static constructor explicitly .
+		- static constructor is always parameterless bcoz it call implicitly by CLR 
+		- static constructor does not contain access modifier .
+		- Static member should be called with classname . operator 
+
+		Note : what are different classes :
+			Partial class, sealed class, static class, abstract class , interface class
 
 
 
@@ -262,13 +306,12 @@ Answer :
 				- when two interface contain same method which method interface is implemented inside child classes is done
 				  with the help of explicit interface in c#.
 
-
 Question 17 : Difference between interface and Abstract ?
 
 					Abstract											Interface
 
 1: Does not support Multiple inheritence					1: Support Multiple inheritence 
-2: Concrete method is allowed .								2: Concrete method i.e non abstract method not allowed
+2: Concrete method is allowed i.e non-abstract method  .	2: Concrete method i.e non abstract method not allowed
 3: Can have access modifiers for member .					3: Can not have access modifiers for members .
 4: Fields and Constants can be defined .					4: No Fields and constants can defined	
 5: if u want to increase Reusabiltity using					5: Interface are used to define contract,
@@ -282,30 +325,8 @@ Question 17 : Difference between interface and Abstract ?
 	- An Abstract class is class that is declared abstract , it may or may not be include abstract methods
 		i.e contain at least one abstract method
 	- Abstract classes cannot be instantiated . but can have constructor 
-	- Abstract method must be implemented in subclass .
+	- Abstract method must be implemented in subclass with override keyword .
 
-
-Question 18 : Static keyword in c# 
-Answer : 
-	- We use static keyword in order to make variable class or function of type static .
-	- Static keyword when used ensure that only one instance is created .
-
-	Static variable -: single copy is created and shared among all objects at the class level . 
-
-	static class -: 
-		- A static class is created using the "static" keyword in c# .
-		- static member are stored in a special area inside the heap called "High Frequency Heap".
-		- A c# static class is a class that can not be instantiated .
-		- A static class contain static member only .
-		- Non static class contain static as well as non-static member.
-		- Any class can have static constructor which is automatically called once while first instantiation of class 
-		- We cannot call static constructor explicitly .
-		- static constructor is always parameterless bcoz it call implicitly by CLR 
-		- static constructor does not contain access modifier .
-		- Static member should be called with classname . operator 
-
-		Note : what are different classes :
-			Partial class, sealed class, static class, abstract class , interface class
 
 Question 19 : Partial keyword in c#
 Answer : 
@@ -379,37 +400,35 @@ Answer -:
 	- StringBuilder : is faster than string hence preferred for single threaded programe .
 
 Question 23 : Params keyword in c# ?
-Answer -: "params" is used to pass object array parameter in a function .	
+Answer -: "params" is used to pass object array parameter in a function .
+ Note : if you want pass number of argument but you dont know exactly how many number of argument is pass used params
 
 Question : What if you're not sure of the number of arguments in a function ?
 Answer -: The "params" keyword in c# allows a method to accept a variable number of arguments . 
 		  c# params works as an array of objects
 
 Note : params must be the last parameter in a function .
+	
 
-			
-
-Question 24 : Recursion in c#
-Answer -: 
-	- Divide and Conquer mentality technique . 
-	- Method calling to itself is called "Recursion" .
-
-
-Question 25 : Ref vs Out vs Val keyword in c# ?
+Question 24 : Ref vs Out vs Val keyword in c# ?
 Answer -: 
 	- The ref and out keyword in c# is used for the passing the argument to methods as a reference type .
 	- By default parameters are passed as val type .
 	- Both ref and out are  treated diffrently at the run time  and they treated same at compile time .
 
-- Point 1 : Out and Ref are c keyword helps to pass variable by References
+- Point 1 : Out and Ref are c# keyword helps to pass variable by References
 - Point 2 : Data sent from caller to callee and vice versa it affects the value 
 			ref is two way from caller to callee and vice versa back
 - Point 3 : Data sent from the caller has been discarded and its mandatory to intialize the variable inside the callee
-			Out is one way from callee to called
-	
+			Out is one way from callee to caller
+
+Question 25 : Recursion in c#
+Answer -: 
+	- Divide and Conquer mentality technique . 
+	- Method calling to itself is called "Recursion" .	
 
 
-Question 25 : Enum in c#
+Question 26 : Enum in c#
 Answer -:
 		- enum is named integer constant . 
 		- we can only assign integer value to Enum member .
@@ -426,7 +445,11 @@ Answer -:
 Question 27 : What is Exception ?
 Answer -: 
 		- Unintentional error occurred while application is Running  then after Exception Application Crashed.
+
 	Foe example -: An attempt to read a file that does not exists or try to read database table that does not exist .
+
+	Note :
+
 		- Exception is class and Every exception in c# inherits from System.Exception class.
 
 	Types of Exception -:
@@ -457,7 +480,7 @@ Answer -: Yes , but at a time only one exception will be executed .
 
 Question 32 : What is difference between throw vs throws ex ?
 Answer -: 
-	- Throw preserves stack trace whereas replaces stack trace and gives current exception stack trace information .
+	- Throw preserves stack trace whereas throws ex replaces stack trace and gives current exception stack trace information .
 	- It is good practice to use the "throw" statement than "Throw ex" 
 	  because it gives us more accurate stack trace information than "throw ex" .  
 
@@ -465,7 +488,7 @@ Note -:
 	1: Stack trace gives you information about exception .
 	2: Finally block is always executed .
 
-
+	 
 -------------------------------------------------------------------------------------------------------------------------- 
 
 Question 33 : What is Boxing and UnBoxing ?
@@ -491,7 +514,7 @@ Questions 35 : Advantage
 	
 	Note : Constraints in Generics 
 		
-			Constraints										Descriptions 
+		Constraints										Descriptions 
 
 	1: where T:class						- The type argument must be reference type
 	2: where T:new()						- The type argument must have a public parameterless constructor
@@ -501,7 +524,7 @@ Questions 35 : Advantage
 Questions 36: what are generic collections ?
 	
 	- Generic collection contain the advantages of Array and Collection
-
+	- System.collection.generic namespace is used
 	A] Array -:
 		Advantage :
 		1: store strongly type datatype i.e homogenous element .
@@ -564,7 +587,6 @@ Question 39 : Types of Delegates ?
 Answer -: 
 	1] Single Delegate 
 	2] Multicast Delegate ( Holds multiple functions reference )
-
 
 	Note  - : 
 		1: if the delegate has return type other than void and if the delegate is a multicast delegate, only the value of the 
@@ -634,12 +656,12 @@ Answer :
 				int a=123455678;
 				int b=12345678;
 
-				int c=(checked)a+b; // throe overflow exception
+				int c=(checked)a+b; // throw overflow exception
 			}
 		}
 
 
-	- unchecked is used for const variable show error at compile time to bypass this inchecked keyword is used
+	- unchecked is used for const variable show error at compile time to bypass this unchecked keyword is used
 
 
 	Example :
